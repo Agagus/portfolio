@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inspiration: ['INSPIRATION']
+        inspiration: ['INSPIRATION'],
+        andika: ['ANDIKA']
       }
     },
   },
