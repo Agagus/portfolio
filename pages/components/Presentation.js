@@ -6,7 +6,7 @@ const Presentation = () => {
   return (
     <div class="p-4 sm:ml-64 grid grid-cols-1 sm:grid-cols-2">
     {/* <div class="flex justify-end w-screen h-auto items-center"> */}
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center border-solid border-2 border-b-current border-l-current">
             <h1 class="font-inspiration text-9xl">Full stack</h1>
             <h2 class="font-mono text-5xl">developer</h2>
         </div>
