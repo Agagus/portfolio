@@ -14,7 +14,7 @@ const SideBar = () => {
 </button>
 
 <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 opacity-30 dark:bg-gray-800">
       <ul class="space-y-2 font-medium">
          <li>
             <Link href="/" class="flex flex-col text-5xl items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -39,18 +39,18 @@ const SideBar = () => {
             </Link>
          </li>
          <li>
-         <a href="https://wa.link/w9i7cb" target='_blank' class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
+         <a href="https://wa.link/w9i7cb" target='_blank' class="ml-3 flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
             {/* <a href='https://wa.link/w9i7cb' target='_blank'> */}
                <AiOutlineWhatsApp />
             </a>
          </li>
          <li>
-         <a href="https://github.com/Agagus" target='_blank' class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
+         <a href="https://github.com/Agagus" target='_blank' class="ml-3 flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
                <VscGithubAlt />
             </a>
          </li>
          <li>
-         <a href="https://www.linkedin.com/in/agustina-zanetti-4b7a67204/" target='_blank' class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
+         <a href="https://www.linkedin.com/in/agustina-zanetti-4b7a67204/" target='_blank' class="ml-3 flex items-center p-2 text-gray-900 rounded-lg dark:text-white">
                <AiFillLinkedin />
             </a>
          </li>

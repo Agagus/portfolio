@@ -3,12 +3,17 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
 
+
 @font-face {
     font-family: "INSPIRATION";
     src: url("../Inspiration-Regular.ttf");
   }
 
 body {
+  width: 100vw;
+  background-image: url(../public/bg6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: rgb(2, 11, 21);
   color: rgb(233, 223, 182);
 }
