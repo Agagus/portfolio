@@ -9,6 +9,7 @@ import node from "../public/node-logo.png"
 import express from "../public/expressjs-logo.png"
 import postgres from "../public/postgresql-logo.png"
 import next from "../public/nextjs-logo.png"
+import Container from './components/Container'
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
       <Head>
           <title>Agustina - Sobre mi</title>
       </Head>
-      <div class="p-4 sm:ml-64 grid grid-colst-1 ">
+      <Container>
           <p class="font-inspiration text-7xl m-8">Te cuento un poco mas de mi</p>
           <div class="p-4 sm: grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div class="flex flex-col justify-around">
@@ -50,7 +51,7 @@ const About = () => {
               </div>
 
           </div>
-      </div>
+      </Container>
     </>
   )
 }

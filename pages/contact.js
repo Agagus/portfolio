@@ -7,7 +7,7 @@ const ContactMe = () => {
       <Head>
           <title>Agustina - Contáctame</title>
       </Head>
-      <div>C</div>
+      <div></div>
     
     </>
   )
