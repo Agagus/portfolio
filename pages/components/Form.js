@@ -1,6 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Form = () => {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+
+  console.log(email, name, message);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let data = {
+      email,
+      name,
+      message,
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setName('')
+        setEmail('')
+        setMessage('')
+      }
+    })
+  }
+
   return (
     <form className='p-8'>
         <div className="relative z-0 w-full mb-6 group">
@@ -8,9 +41,10 @@ const Form = () => {
             type="email"
             name="floating_email"
             id="floating_email"
-            className="block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
             required
+            onChange={ (e) => {setEmail(e.target.value)}}
           />
           <label
             for="floating_email"
@@ -24,9 +58,10 @@ const Form = () => {
               type="text"
               name="floating_first_name"
               id="floating_first_name"
-              className="block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              onChange={ (e) => {setName(e.target.value)}}
             />
             <label
               for="floating_first_name"
@@ -35,12 +70,12 @@ const Form = () => {
               Nombre
             </label>
           </div>
-          <div className="relative z-0 w-full mb-6 group">
+          {/* <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
               name="floating_last_name"
               id="floating_last_name"
-              className="block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
             />
@@ -50,16 +85,17 @@ const Form = () => {
             >
               Apellido
             </label>
-          </div>
+          </div> */}
         </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
               name="the_message"
               id="the_message"
-              className="block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               required
+              onChange={ (e) => {setMessage(e.target.value)}}
             />
             <label
               for="the_message"
@@ -72,6 +108,7 @@ const Form = () => {
         <button
           type="submit"
           className="border border-solid hover:bg-orange-100 hover:bg-opacity-50 hover:font-semibold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={(e) =>{handleSubmit(e)}}
         >
           Enviar
         </button>
