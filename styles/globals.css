@@ -10,10 +10,10 @@
   }
 
 body {
-  width: 100vw;
-  background-image: url(../public/bg6.jpg);
+  /* width: 100vw; */
+  /* background-image: url(../public/bg6.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   background-color: rgb(2, 11, 21);
   color: rgb(233, 223, 182);
 }

@@ -29,7 +29,22 @@ const SideBar = () => {
         </svg>
       </button>
 
-      <aside
+      <div className="w-full pr-8 pt-6 flex justify-between">
+        <Link href="/" className="flex flex-col text-4xl w-48 font-inspiration">
+          <span className="p-2 pb-0 self-center">A</span>
+          <span className="ml-9 p-2 pt-0 pr-6 self-center text-4xl border-solid border-2 border-b-current border-r-gray-900 border-t-0 border-l-0">
+            Z
+          </span>
+        </Link>
+
+        <ul className="flex flex-row justify-end font-mono">
+          <li className="p-4">Sobre mi</li>
+          <li className="p-4">Contacto</li>
+          <li className="p-4">Mis proyectos</li>
+        </ul>
+      </div>
+
+      {/* <aside
         id="default-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
@@ -54,10 +69,7 @@ const SideBar = () => {
                 href="about"
                 className="flex items-center mt-16 p-2 font-mono text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                {/* <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"> */}
-                {/* <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> */}
                 <span className="flex-1 ml-3 whitespace-nowrap">Sobre mi</span>
-                {/* </a> */}
               </Link>
             </li>
             <li>
@@ -65,10 +77,7 @@ const SideBar = () => {
                 href="contact"
                 className="flex items-center p-2 font-mono text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                {/* <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"> */}
-                {/* <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> */}
                 <span className="flex-1 ml-3 whitespace-nowrap">Contáctame</span>
-                {/* </a> */}
               </Link>
             </li>
             <li>
@@ -76,10 +85,7 @@ const SideBar = () => {
                 href="projects"
                 className="flex items-center p-2 font-mono text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                {/* <a href="#" className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"> */}
-                {/* <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> */}
                 <span className="flex-1 ml-3 whitespace-nowrap">Mis proyectos</span>
-                {/* </a> */}
               </Link>
             </li>
             <li>
@@ -88,7 +94,6 @@ const SideBar = () => {
                 target="_blank"
                 className="ml-3 flex items-center p-2 text-gray-900 rounded-lg dark:text-white"
               >
-                {/* <a href='https://wa.link/w9i7cb' target='_blank'> */}
                 <AiOutlineWhatsApp />
               </a>
             </li>
@@ -112,7 +117,7 @@ const SideBar = () => {
             </li>
           </ul>
         </div>
-      </aside>
+      </aside> */}
     </div>
   );
 };
