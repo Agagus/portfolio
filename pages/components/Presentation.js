@@ -2,32 +2,43 @@ import React from "react";
 import image from "./../../Mi caricatura.png";
 import Image from "next/image";
 import Container from "./Container";
+import { AiOutlineSwapRight } from "react-icons/ai";
+import { RiArrowDropRightLine } from "react-icons/ri";
+import Link from "next/link";
 
 const Presentation = () => {
   return (
     <Container>
-      <div className="flex flex-row items-center mt-4 mb-4 sm:mt-0">
-        <div className="sm:grid sm:grid-cols-2 gap-4 flex flex-col justify-center items-center">
-          <div>
-            <p className="font-mono text-lg mb-4 text-center">
-              Hola! Mi nombre es
-            </p>
-            <h1 className="w-full font-andika text-7xl sm:text-6xl text-center">
-              AGUSTINA ZANETTI
-            </h1>
-            <p className="font-mono text-lg mt-4 text-center">
-              y soy FULL STACK DEVELOPER
-            </p>
-          </div>
-
-          <div className="h-fit justify-center items-center">
-            <Image
-              className="h-72 w-72 rounded-full xl:w-3/6 xl:h-5/6 md:w-52 md:h-52 object-cover shadow-md shadow-cyan-950"
-              src={image}
-              alt="This is me"
-            />
-          </div>
+      <div className="sm:grid sm:grid-cols-2 gap-4 flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
+          <p className="font-mono text-lg mb-4">Hola! Mi nombre es</p>
+          <h1 className="w-full text-center font-andika text-6xl sm:text-6xl">
+            AGUSTINA ZANETTI
+          </h1>
+          <p className="font-mono text-lg mt-4">
+            y soy <strong>FULL STACK DEVELOPER</strong>
+          </p>
+          <Link
+            className="hidden sm:inline-flex sm:w-fit items-center font-mono border text-sm border-yellow-900 px-4 py-2 m-8 rounded-md hover:bg-yellow-900 hover:bg-opacity-10"
+            href="/about"
+          >
+            Mas de mi <RiArrowDropRightLine className="ml-1" />
+          </Link>
         </div>
+
+        <div className="h-fit flex justify-center items-center">
+          <Image
+            className="h-72 w-72 rounded-full md:w-80 md:h-80 object-cover shadow-md shadow-amber-900"
+            src={image}
+            alt="This is me"
+          />
+        </div>
+        <Link
+          className="inline-flex items-center font-mono border border-yellow-900 px-4 py-2 m-8 rounded-md sm:hidden hover:bg-yellow-900 hover:bg-opacity-10"
+          href="/about"
+        >
+          Mas de mi <RiArrowDropRightLine className="ml-1" />
+        </Link>
       </div>
 
       {/* <div class="grid grid-cols-2 justify-center pl-8">

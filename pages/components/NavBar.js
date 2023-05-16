@@ -41,7 +41,7 @@ const NavBar = () => {
           </Link>
         </div>
         {navState ? (
-          <div className=" md:hidden items-center border-b border-b-teal-800 ">
+          <div className=" md:hidden items-center border-b border-opacity-10 border-b-teal-800">
             <ul className="flex flex-col items-center font-andika uppercase">
               <Link
                 href="/about"
@@ -68,7 +68,7 @@ const NavBar = () => {
           </div>
         ) : (
           <div className="hidden md:w-full md:pr-8 md:pt-6 md:flex md:justify-end">
-            <ul className="flex flex-row justify-end font-mono w-1/2">
+            <ul className="flex flex-row justify-between font-mono w-1/2">
               <Link href="/about" className="p-4">
                 Sobre mi
               </Link>
