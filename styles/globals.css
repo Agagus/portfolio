@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
 
 @font-face {
     font-family: "INSPIRATION";
     src: url("../Inspiration-Regular.ttf");
   }
+
 
 body {
   /* width: 100vw; */
@@ -17,5 +18,16 @@ body {
   /* background-color: rgb(15, 6, 1); */
   background-color: rgb(15, 13, 18);
   /* color: rgb(233, 223, 182); */
-  color: rgb(212, 174, 152)
+  color: rgb(212, 174, 152);
+  /* color: rgba(123, 72, 47, 0.175) */
+}
+
+
+@keyframes rotateScale {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(0);
+  }
 }

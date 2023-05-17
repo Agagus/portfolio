@@ -10,9 +10,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inspiration: ['INSPIRATION'],
-        andika: ['ANDIKA']
-      }
+        inspiration: ["INSPIRATION"],
+        nunito: ["Nunito", "sans-serif"],
+        trocchi: ["Trocchi", "serif"],
+      },
     },
   },
   plugins: [],

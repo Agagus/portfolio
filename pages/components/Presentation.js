@@ -12,7 +12,7 @@ const Presentation = () => {
       <div className="sm:grid sm:grid-cols-2 gap-4 flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <p className="font-mono text-lg mb-4">Hola! Mi nombre es</p>
-          <h1 className="w-full text-center font-andika text-6xl sm:text-6xl">
+          <h1 className="w-full text-center font-nunito text-6xl sm:text-6xl">
             AGUSTINA ZANETTI
           </h1>
           <p className="font-mono text-lg mt-4">
