@@ -24,8 +24,8 @@ const About = () => {
         {/* <p className="font-mono text-5xl drop-shadow-[0px_2px_2px_rgb(123,72,47)] m-8">
           Te cuento un poco mas de mi
         </p> */}
-        <div className="p-4 grid grid-cols-1 justify-items-center sm:grid-cols-2 gap-8">
-          <div className="flex flex-col self-center justify-center text-center p-2 w-11/12 shadow-xl shadow-[rgba(123,72,47,0.175)] drop-shadow-md rounded-lg">
+        <div className="p-4 h-full grid grid-cols-1 justify-items-center items-center md:grid-cols-2 gap-8">
+          <div className="flex flex-col self-start justify-center text-center p-8 w-11/12 shadow-xl shadow-[rgba(123,72,47,0.175)] drop-shadow-md rounded-lg">
             <p className="font-nunito">
               Soy una persona <strong>amante de la naturaleza</strong>, amable,
               entusiasta y 100% <strong>optimista</strong>, que disfruta del
@@ -49,7 +49,7 @@ const About = () => {
               <strong className=" font-mono">desarolladora FULL STACK!</strong>
             </p>
           </div>
-          <div className="flex flex-col items-center max-w-sm">
+          <div className="flex flex-col items-center justify-center max-w-sm">
             <p
               onClick={() => setSkills(!skills)}
               className="mb-5 font-mono text-xl text-center border border-yellow-900 px-4 py-2 m-8 rounded-md transition-all duration-500 hover:bg-yellow-900 hover:bg-opacity-10"
@@ -61,7 +61,7 @@ const About = () => {
             </Link>
 
             {skills && (
-              <div className="grid w-11/12 grid-cols-2 grid-rows-4 md:grid-cols-4 gap-2 ">
+              <div className="grid w-11/12 pt-4 grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 sm:w-full gap-2 transition-all">
                 <Image
                   src={image}
                   alt="Javascript"
