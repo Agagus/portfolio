@@ -1,7 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineWhatsApp, AiFillLinkedin } from "react-icons/ai";
-import { VscGithubAlt } from "react-icons/vsc";
 
 const NavBar = () => {
   const [navState, setNavState] = useState(false);

@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Form = () => {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   console.log(email, name, message);
+
+  let stateButton = true;
+
+  const emailRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  let checkEmail = emailRegex.test(email);
+
+  if (name !== "" && message !== "" && checkEmail) stateButton = false;
+  console.log(stateButton);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,106 +23,101 @@ const Form = () => {
       email,
       name,
       message,
-    }
+    };
 
-    fetch('/api/contact', {
-      method: 'POST',
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setName('')
-        setEmail('')
-        setMessage('')
-      }
-    })
-  }
+      body: JSON.stringify(data),
+    });
+
+    alert("Tu mensaje fue enviado con éxito");
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
 
   return (
-    <form className='p-8'>
-        <div className="relative z-0 w-full mb-6 group">
-          <input
-            type="email"
-            name="floating_email"
-            id="floating_email"
-            className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
-            required
-            onChange={ (e) => {setEmail(e.target.value)}}
-          />
-          <label
-            for="floating_email"
-            className="font-mono peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >
-            Ingresá tu mail
-          </label>
-        <div className="grid md:grid-cols-2 md:gap-6">
+    <form className="p-8">
+      <div className="relative z-0 w-full mb-6 group">
+        <div className="grid md:w-5/6">
+          <div className="relative z-0 w-full mb-6 group">
+            <input
+              type="email"
+              name="floating_email"
+              id="floating_email"
+              value={email}
+              className="font-mono block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-orange-300 appearance-none focus:outline-none focus:ring-0 focus:border-orange-200 peer"
+              placeholder=" "
+              required
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <label
+              htmlFor="floating_email"
+              className="font-mono peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Ingresá tu mail
+            </label>
+          </div>
           <div className="relative z-0 w-full mb-6 group">
             <input
               type="text"
               name="floating_first_name"
               id="floating_first_name"
-              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              value={name}
+              className="font-mono block my-4 py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-orange-300 appearance-none  focus:outline-none focus:ring-0 focus:border-orange-200 peer"
               placeholder=" "
               required
-              onChange={ (e) => {setName(e.target.value)}}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
             />
             <label
-              for="floating_first_name"
-              className="font-mono peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              htmlFor="floating_first_name"
+              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Nombre
             </label>
           </div>
-          {/* <div className="relative z-0 w-full mb-6 group">
-            <input
-              type="text"
-              name="floating_last_name"
-              id="floating_last_name"
-              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              for="floating_last_name"
-              className="font-mono peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Apellido
-            </label>
-          </div> */}
-        </div>
           <div className="relative z-0 w-full mb-6 group">
-            <input
+            <textarea
               type="text"
               name="the_message"
               id="the_message"
-              className="font-mono block py-2.5 px-0 w-full text-sm text-orange-100 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              value={message}
+              className="my-4 font-mono block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-orange-300 appearance-none  focus:outline-none focus:ring-0 focus:border-orange-200 peer"
               placeholder=" "
               required
-              onChange={ (e) => {setMessage(e.target.value)}}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
             />
             <label
-              for="the_message"
-              className="font-mono peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              htmlFor="the_message"
+              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Dejame un mensaje
             </label>
           </div>
         </div>
-        <button
-          type="submit"
-          className="border border-solid hover:bg-orange-100 hover:bg-opacity-50 hover:font-semibold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onClick={(e) =>{handleSubmit(e)}}
-        >
-          Enviar
-        </button>
-      </form>
-  )
-}
+      </div>
+      <button
+        disabled={stateButton}
+        type="submit"
+        className="border border-solid hover:bg-orange-100 hover:bg-opacity-50 hover:font-semibold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:opacity-50 disabled:hover:cursor-default"
+        onClick={(e) => {
+          handleSubmit(e);
+        }}
+      >
+        Enviar
+      </button>
+    </form>
+  );
+};
 
-export default Form
+export default Form;
