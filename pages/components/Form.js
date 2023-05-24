@@ -41,7 +41,7 @@ const Form = () => {
   };
 
   return (
-    <form className="p-8">
+    <form className="p-8 px-16">
       <div className="relative z-0 w-full mb-6 group">
         <div className="grid md:w-5/6">
           <div className="relative z-0 w-full mb-6 group">
@@ -59,7 +59,7 @@ const Form = () => {
             />
             <label
               htmlFor="floating_email"
-              className="font-mono peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="font-mono peer-focus:font-medium absolute text-sm text-amber-100 opacity-50 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Ingresá tu mail
             </label>
@@ -79,7 +79,7 @@ const Form = () => {
             />
             <label
               htmlFor="floating_first_name"
-              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-amber-100 opacity-50 duration-300 transform -translate-y-6 scale-75 top-4 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Nombre
             </label>
@@ -99,7 +99,7 @@ const Form = () => {
             />
             <label
               htmlFor="the_message"
-              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="my-4 font-mono peer-focus:font-medium absolute text-sm text-amber-100 opacity-50 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-500  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Dejame un mensaje
             </label>
@@ -109,7 +109,7 @@ const Form = () => {
       <button
         disabled={stateButton}
         type="submit"
-        className="border border-solid hover:bg-orange-100 hover:bg-opacity-50 hover:font-semibold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:opacity-50 disabled:hover:cursor-default"
+        className="border border-yellow-900 rounded-md hover:bg-yellow-900 hover:bg-opacity-10 font-medium text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:opacity-30 disabled:hover:cursor-default"
         onClick={(e) => {
           handleSubmit(e);
         }}
