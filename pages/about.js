@@ -11,16 +11,18 @@ import postgres from "../public/postgresql-logo.png";
 import next from "../public/nextjs-logo.png";
 import { useState } from "react";
 import Link from "next/link";
+import Container from "./components/Container";
+import { SlLocationPin } from "react-icons/sl";
 
 const About = () => {
   const [skills, setSkills] = useState(false);
 
   return (
-    <>
+    <Container>
       <Head>
         <title>Agustina - Sobre mi</title>
       </Head>
-      <div>
+      <div className="self-center">
         {/* <p className="font-mono text-5xl drop-shadow-[0px_2px_2px_rgb(123,72,47)] m-8">
           Te cuento un poco mas de mi
         </p> */}
@@ -48,11 +50,15 @@ const About = () => {
             <p>
               <strong className=" font-mono">desarolladora FULL STACK!</strong>
             </p>
+            <p className="font-mono pt-8 flex flex-row gap-4 justify-center">
+              <SlLocationPin />
+              Buenos Aires, ARGENTINA
+            </p>
           </div>
           <div className="flex flex-col items-center justify-center max-w-sm">
             <p
               onClick={() => setSkills(!skills)}
-              className="mb-5 font-mono text-xl text-center border border-yellow-900 px-4 py-2 m-8 rounded-md transition-all duration-500 hover:bg-yellow-900 hover:bg-opacity-10"
+              className="mb-5 font-mono text-xl text-center border border-yellow-900 px-4 py-2 m-8 rounded-md transition-all duration-500 hover:cursor-pointer hover:bg-yellow-900 hover:bg-opacity-10"
             >
               Mis tech-skills
             </p>
@@ -107,7 +113,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 };
 

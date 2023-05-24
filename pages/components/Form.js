@@ -41,7 +41,7 @@ const Form = () => {
   };
 
   return (
-    <form className="p-8 px-16">
+    <form className="p-8 px-16 self-center">
       <div className="relative z-0 w-full mb-6 group">
         <div className="grid md:w-5/6">
           <div className="relative z-0 w-full mb-6 group">

@@ -4,16 +4,16 @@ import Container from "./components/Container";
 import Form from "./components/Form";
 import { AiOutlineWhatsApp, AiFillLinkedin } from "react-icons/ai";
 import { VscGithubAlt } from "react-icons/vsc";
+import { FiMail } from "react-icons/fi";
 import Link from "next/link";
-import { RiMailFill } from "react-icons/ri";
 
 const ContactMe = () => {
   return (
-    <div>
+    <Container>
       <Head>
         <title>Agustina - Contáctame</title>
       </Head>
-      <div className="p-4 grid md:grid-cols-2">
+      <div className="p-4 justify-center grid md:grid-cols-2">
         <div className="flex flex-col justify-center font-nunito p-8 text-md md:text-base">
           <h4 className=" font-mono">
             Si querés conocerme y agendar una entrevista podes completar el
@@ -43,7 +43,7 @@ const ContactMe = () => {
               target="_blank"
               className=" w-fit flex flex-row gap-4 items-center"
             >
-              <RiMailFill /> agus.zanetti4@gmail.com
+              <FiMail /> agus.zanetti4@gmail.com
             </Link>
             <Link
               href="https://www.linkedin.com/in/agustina-zanetti-4b7a67204/"
@@ -57,7 +57,7 @@ const ContactMe = () => {
         </div>
         <Form />
       </div>
-    </div>
+    </Container>
   );
 };
 

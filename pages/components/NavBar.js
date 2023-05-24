@@ -6,7 +6,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="w-full top-0 left-0 flex flex-col md:flex-row md:fixed justify-between">
         <div className="flex justify-between">
           <button
             type="button"
@@ -33,7 +33,7 @@ const NavBar = () => {
             className="flex flex-col text-4xl w-32 font-inspiration md:w-44 md:pr-8 md:pt-6 md:flex"
           >
             <span className="p-2 pb-0 self-center">A</span>
-            <span className="ml-9 p-2 pt-0 pr-6 self-center text-4xl border-solid border-2 border-b-current border-r-gray-900 border-t-0 border-l-0">
+            <span className="ml-9 p-2 pt-0 pr-6 self-center text-4xl border-solid border-2 border-b-current border-r-orange-950 border-t-0 border-l-0">
               Z
             </span>
           </Link>
