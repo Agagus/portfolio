@@ -22,7 +22,7 @@ const About = () => {
       <Head>
         <title>Agustina - Sobre mi</title>
       </Head>
-      <div className="self-center">
+      <div className="self-center pb-12">
         {/* <p className="font-mono text-5xl drop-shadow-[0px_2px_2px_rgb(123,72,47)] m-8">
           Te cuento un poco mas de mi
         </p> */}
@@ -67,48 +67,50 @@ const About = () => {
             </Link>
 
             {skills && (
-              <div className="grid w-11/12 pt-4 grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 sm:w-full gap-2 transition-all">
-                <Image
-                  src={image}
-                  alt="Javascript"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={react}
-                  alt="React"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={html}
-                  alt="html"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={css}
-                  alt="css"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={next}
-                  alt="next"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={node}
-                  alt="node"
-                  className="self-center hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={postgres}
-                  alt="postgres"
-                  className="hover:animate-[spin_1s_ease-in]"
-                />
-                <Image
-                  src={express}
-                  alt="express"
-                  className="self-center bg-white rounded-md opacity-30 hover:animate-[spin_1s_ease-in]"
-                />
-              </div>
+              <Container>
+                <div className="grid w-11/12 pt-4 grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 sm:w-full gap-2 transition-all">
+                  <Image
+                    src={image}
+                    alt="Javascript"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={react}
+                    alt="React"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={html}
+                    alt="html"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={css}
+                    alt="css"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={next}
+                    alt="next"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={node}
+                    alt="node"
+                    className="self-center hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={postgres}
+                    alt="postgres"
+                    className="hover:animate-[spin_1s_ease-in]"
+                  />
+                  <Image
+                    src={express}
+                    alt="express"
+                    className="self-center bg-white rounded-md opacity-30 hover:animate-[spin_1s_ease-in]"
+                  />
+                </div>
+              </Container>
             )}
           </div>
         </div>

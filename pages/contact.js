@@ -13,7 +13,7 @@ const ContactMe = () => {
       <Head>
         <title>Agustina - Contáctame</title>
       </Head>
-      <div className="p-4 justify-center grid md:grid-cols-2">
+      <div className="p-4 pb-12 justify-center grid md:grid-cols-2">
         <div className="flex flex-col justify-center font-nunito p-8 text-md md:text-base">
           <h4 className=" font-mono">
             Si querés conocerme y agendar una entrevista podes completar el

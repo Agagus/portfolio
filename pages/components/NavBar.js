@@ -39,8 +39,15 @@ const NavBar = () => {
           </Link>
         </div>
         {navState ? (
-          <div className=" md:hidden items-center border-b border-opacity-10 border-b-teal-800">
-            <ul className="flex flex-col items-center font-andika uppercase">
+          <div className=" md:hidden items-center border-b border-opacity-10 border-b-amber-800">
+            <ul className="flex flex-col items-center font-mono uppercase">
+              <Link
+                href="/"
+                onClick={() => setNavState(!navState)}
+                className="p-4"
+              >
+                Inicio
+              </Link>
               <Link
                 href="/about"
                 onClick={() => setNavState(!navState)}
@@ -65,8 +72,11 @@ const NavBar = () => {
             </ul>
           </div>
         ) : (
-          <div className="hidden md:w-full md:pr-8 md:pt-6 md:flex md:justify-end">
-            <ul className="flex flex-row justify-between font-mono w-1/2">
+          <div className="hidden md:w-full md:pt-6 md:flex md:justify-end">
+            <ul className="flex flex-row justify-between items-center font-mono w-2/3">
+              <Link href="/" className="p-4">
+                Inicio
+              </Link>
               <Link href="/about" className="p-4">
                 Sobre mi
               </Link>

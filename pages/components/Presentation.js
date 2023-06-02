@@ -9,7 +9,7 @@ import Link from "next/link";
 const Presentation = () => {
   return (
     <Container>
-      <div className="sm:grid sm:grid-cols-2 gap-4 flex flex-col justify-center items-center">
+      <div className="pb-12 sm:grid sm:grid-cols-2 gap-4 flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <p className="font-mono text-lg mb-4">Hola! Mi nombre es</p>
           <h1 className="w-full text-center font-nunito text-6xl sm:text-6xl">
@@ -19,7 +19,7 @@ const Presentation = () => {
             y soy <strong>FULL STACK DEVELOPER</strong>
           </p>
           <Link
-            className="hidden sm:inline-flex sm:w-fit items-center font-mono border text-sm border-yellow-900 px-4 py-2 m-8 rounded-md hover:bg-yellow-900 hover:bg-opacity-10"
+            className="hidden sm:inline-flex sm:w-fit items-center font-mono border text-sm transition-all duration-500 border-yellow-900 px-4 py-2 m-8 rounded-md hover:bg-yellow-900 hover:bg-opacity-10"
             href="/about"
           >
             Mas de mi <RiArrowDropRightLine className="ml-1" />
@@ -34,7 +34,7 @@ const Presentation = () => {
           />
         </div>
         <Link
-          className="inline-flex items-center font-mono border border-yellow-900 px-4 py-2 m-8 rounded-md sm:hidden hover:bg-yellow-900 hover:bg-opacity-10"
+          className="inline-flex items-center font-mono border border-yellow-900 px-4 py-2 m-8 rounded-md transition-all duration-500 sm:hidden hover:bg-yellow-900 hover:bg-opacity-10"
           href="/about"
         >
           Mas de mi <RiArrowDropRightLine className="ml-1" />
