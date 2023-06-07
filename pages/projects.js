@@ -23,7 +23,7 @@ const projects = () => {
               <Image
                 src={countries}
                 alt="Countries project"
-                className=" py-2 sm:py-0 transition-all duration-500 hover:scale-105 hover:cursor-pointer"
+                className="py-2 sm:py-0 transition-all duration-500 hover:scale-105 hover:cursor-pointer"
               />
               <p className="text-center text-sm pb-2 sm:pt-2">App países</p>
             </Link>
@@ -34,7 +34,7 @@ const projects = () => {
               <Image
                 src={starWars}
                 alt="Star-wars project"
-                className="py-2 sm:py-0"
+                className="py-2 sm:py-0 transition-all duration-500 hover:scale-105 hover:cursor-pointer"
               />
               <p className="text-center text-sm pb-2 sm:pt-2">
                 Start-wars battle app
@@ -47,7 +47,7 @@ const projects = () => {
               <Image
                 src={starWars}
                 alt="Star-wars project"
-                className=" py-2 sm:py-0"
+                className="py-2 sm:py-0 transition-all duration-500 hover:scale-105 hover:cursor-pointer"
               />
               <p className="text-center text-sm pb-2 sm:pt-2">App países</p>
             </Link>

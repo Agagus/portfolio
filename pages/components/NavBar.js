@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
   const [navState, setNavState] = useState(false);
+  const { asPath } = useRouter();
+  console.log(asPath);
 
   return (
     <>
@@ -73,17 +76,45 @@ const NavBar = () => {
           </div>
         ) : (
           <div className="hidden md:w-full md:pt-6 md:flex md:justify-end">
-            <ul className="flex flex-row justify-between items-center font-mono w-2/3">
-              <Link href="/" className="p-4">
+            <ul className="flex flex-row justify-evenly items-center font-mono w-2/3">
+              <Link
+                href="/"
+                className={
+                  asPath === "/"
+                    ? "border border-t-0 border-x-0 border-b-red-950"
+                    : "hover:border hover:border-t-0 hover:border-x-0 hover:border-b-red-950 hover:border-opacity-80"
+                }
+              >
                 Inicio
               </Link>
-              <Link href="/about" className="p-4">
+              <Link
+                href="/about"
+                className={
+                  asPath === "/about"
+                    ? "border border-t-0 border-x-0 border-b-red-950"
+                    : "hover:border hover:border-t-0 hover:border-x-0 hover:border-b-red-950 hover:border-opacity-80"
+                }
+              >
                 Sobre mi
               </Link>
-              <Link href="/contact" className="p-4">
+              <Link
+                href="/contact"
+                className={
+                  asPath === "/contact"
+                    ? "border border-t-0 border-x-0 border-b-red-950"
+                    : "hover:border hover:border-t-0 hover:border-x-0 hover:border-b-red-950 hover:border-opacity-80"
+                }
+              >
                 Contacto
               </Link>
-              <Link href="/projects" className="p-4">
+              <Link
+                href="/projects"
+                className={
+                  asPath === "/projects"
+                    ? "border border-t-0 border-x-0 border-b-red-950"
+                    : "hover:border hover:border-t-0 hover:border-x-0 hover:border-b-red-950 hover:border-opacity-80"
+                }
+              >
                 Mis proyectos
               </Link>
             </ul>
