@@ -2,7 +2,6 @@ import React from "react";
 import image from "./../../Mi caricatura.png";
 import Image from "next/image";
 import Container from "./Container";
-import { AiOutlineSwapRight } from "react-icons/ai";
 import { RiArrowDropRightLine } from "react-icons/ri";
 import Link from "next/link";
 
@@ -40,22 +39,6 @@ const Presentation = () => {
           Mas de mi <RiArrowDropRightLine className="ml-1" />
         </Link>
       </div>
-
-      {/* <div class="grid grid-cols-2 justify-center pl-8">
-          <div>
-            <p class="font-mono text-lg mb-4">Hola! Soy Agustina y soy</p>
-            <h1 class="w-full font-inspiration text-7xl tracking-wide">
-              Full stack developer
-            </h1>
-          </div>
-        </div>
-        <div class="justify-center items-center">
-          <Image
-            class="rounded-full w-3/6 shadow-md shadow-cyan-950"
-            src={image}
-            alt="This is me"
-          />
-        </div> */}
     </Container>
   );
 };

@@ -26,8 +26,8 @@ const About = () => {
         {/* <p className="font-mono text-5xl drop-shadow-[0px_2px_2px_rgb(123,72,47)] m-8">
           Te cuento un poco mas de mi
         </p> */}
-        <div className="p-4 h-full grid grid-cols-1 justify-items-center items-center md:grid-cols-2 gap-8">
-          <div className="flex flex-col self-start justify-center text-center p-8 w-11/12 shadow-xl shadow-[rgba(123,72,47,0.175)] drop-shadow-md rounded-lg">
+        <div className="h-full grid grid-cols-1 justify-items-center items-center md:grid-cols-2 gap-8">
+          <div className="flex flex-col self-start justify-center text-center p-2 w-11/12 shadow-xl shadow-[rgba(123,72,47,0.175)] drop-shadow-md rounded-lg">
             <p className="font-nunito">
               Soy una persona <strong>amante de la naturaleza</strong>, amable,
               entusiasta y 100% <strong>optimista</strong>, que disfruta del
@@ -50,7 +50,7 @@ const About = () => {
             <p>
               <strong className=" font-mono">desarolladora FULL STACK!</strong>
             </p>
-            <p className="font-mono pt-8 flex flex-row gap-4 justify-center">
+            <p className="font-mono pt-8 flex flex-row gap-2 md:gap-4 justify-center">
               <SlLocationPin />
               Buenos Aires, ARGENTINA
             </p>
@@ -67,8 +67,8 @@ const About = () => {
             </Link>
 
             {skills && (
-              <Container>
-                <div className="grid w-11/12 pt-4 grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 sm:w-full gap-2 transition-all">
+              <>
+                <div className="grid w-9/12 pt-4 grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 sm:w-full sm:gap-2 gap-8 transition-all">
                   <Image
                     src={image}
                     alt="Javascript"
@@ -110,7 +110,7 @@ const About = () => {
                     className="self-center bg-white rounded-md opacity-30 hover:animate-[spin_1s_ease-in]"
                   />
                 </div>
-              </Container>
+              </>
             )}
           </div>
         </div>
